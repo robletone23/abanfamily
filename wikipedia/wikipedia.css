@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #D9E7D9, #C0C0C0);
+
+    /* background: url('bgg.jpg') no-repeat center center fixed; */
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+.gallery {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.gallery:first-of-type {
+    grid-template-columns: repeat(2, 1fr); /* First row with 2 images */
+}
+
+.gallery:not(:first-of-type) {
+    grid-template-columns: repeat(4, 1fr); /* Rows with 4 images */
+}
+
+.image-box {
+    position: relative;
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Ensure the image fits within the box */
+    height: 200px; /* Set a fixed height for the image box */
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15); /* Added shadow for gallery box */
+}
+
+.image-box img {
+    width: 100%; /* Fill the box */
+    height: 100%; /* Fill the box */
+    object-fit: cover; /* Ensure the image covers the entire box */
+    border-radius: 15px;
+}
+
+.image-box:hover {
+    transform: scale(1.05);
+}
+
+.image-box a {
+    text-decoration: none;
+}
+
+.spacer {
+    height: 40px; /* Space between family and cousin galleries */
+}
